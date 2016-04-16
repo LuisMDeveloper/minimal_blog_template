@@ -1,0 +1,189 @@
+$icon-font-path: '../fonts/';
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+
+$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  "Roboto", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+//== Pills
+$nav-underscore-active-link-hover-color:         $brand-primary !default;
+$main-menu-text-color:                           $gray-dark !default
+
+$nav-link-padding:                               8px 15px !default;
+$nav-link-hover-bg:                              $gray-lighter !default;
+
+//** Padding around the thumbnail caption
+$thumbnail-caption-padding:                      38px !default;
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bootstrap-social.scss";
+// endbower
+
+
+// Page header
+// -------------------------
+
+.page-header {
+  border-bottom: 0 !important;
+}
+
+// Underscore
+// -------------------------
+.nav-underscore {
+  > li {
+    float: left;
+
+    // Links rendered as pills
+    + li {
+      margin-left: 2px;
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $main-menu-text-color !important;
+        border-bottom: 4px solid $nav-underscore-active-link-hover-color;
+        //color: $nav-pills-active-link-hover-color;
+        //background-color: $nav-pills-active-link-hover-bg;
+      }
+    }
+  }
+}
+
+// Underscore
+// -------------------------
+.nav-underscore-vertical {
+  > li {
+
+    // Links rendered as pills
+    + li {
+      margin-left: 2px;
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $main-menu-text-color !important;
+        border-bottom: 4px solid $nav-underscore-active-link-hover-color;
+        //color: $nav-pills-active-link-hover-color;
+        //background-color: $nav-pills-active-link-hover-bg;
+      }
+    }
+  }
+}
+
+.main-menu {
+  @extend .nav;
+  @extend .nav-underscore;
+  > li {
+    > a {
+      color: $main-menu-text-color !important;
+    }
+  }
+}
+
+.logo {
+  > a {
+    @extend .h1 ;
+    text-decoration: none !important;
+  }
+}
+
+.jumbotron {
+  background-color: transparent;
+}
+
+.portfolio-area {
+  background-color: #F0F0F0;
+}
+
+.box {
+  padding-top:    $jumbotron-padding;
+  padding-bottom: $jumbotron-padding;
+}
+
+.box-blog {
+  padding-top:    60px;
+  padding-bottom: 60px;
+}
+
+.social-box {
+  padding-top:    60px;
+  padding-bottom: $jumbotron-padding;
+}
+
+.social {
+  .btn-social-icon {
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+  }
+}
+
+.nav-category {
+  > li {
+    position: relative;
+    display: block;
+    padding-right: 15px;
+    > a {
+      position: relative;
+      display: block;
+      padding: $nav-link-padding;
+      background-color: #ffffff;
+      color: $gray-dark;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: $gray !important;
+        color: #ffffff;
+      }
+    }
+
+    // Disabled state sets text to gray and nukes hover/tab effects
+    &.disabled > a {
+      color: $nav-disabled-link-color;
+
+      &:hover,
+      &:focus {
+        color: $nav-disabled-link-hover-color;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: $cursor-disabled;
+      }
+    }
+  }
+}
+
+.thumb:not(:first-child),.thumb:not(:last-child) {
+  padding-right:0px;
+}
+
+.thumb {
+  padding-bottom: 24px;
+}
