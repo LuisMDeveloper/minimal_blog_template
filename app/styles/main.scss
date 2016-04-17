@@ -26,6 +26,8 @@ $body-bg:               #fff !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 
+$font-size-base:          16px !default;
+
 //== Form states and alerts
 //
 //## Define colors for form feedback states and, by default, alerts.
@@ -115,6 +117,7 @@ $jumbotron-heading-color:        inherit !default;
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "social-sharing.scss";
+@import "font-awesome.scss";
 // endbower
 
 
